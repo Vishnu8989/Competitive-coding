@@ -6,4 +6,3 @@ class Solution:
         a = math.pow(2,a)-1
         a = int(a-num)
         return a
-        
