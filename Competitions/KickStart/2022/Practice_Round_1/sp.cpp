@@ -1,56 +1,28 @@
 #include <iostream>
-#include <string.h>
 using namespace std;
-int soln()
+int solve()
 {
-    long long int n, d, c, m;
-    cin >> n >> d >> c >> m;
-    string a;
-    cin >> a;
-    int l = a.length();
-    int i = 0;
-    for (i = 0; i < l; i++)
+    int n, m, c;
+    cin >> n >> m;
+    long long sum = 0;
+    for (int i = 0; i < n; i++)
     {
-        if (a[i] == 'C')
-        {
-            if (c < 1 && a[i + 1] == 'D')
-            {
-                return 0;
-            }
-            c--;
-        }
-        if (a[i] == 'D')
-        {
-            if (d < 1)
-            {
-                return 0;
-            }
-            d--;
-            c = c + m;
-        }
+        cin >> c;
+        sum += c;
     }
-    return 1;
+    return sum % m;
 }
-int main(int argc, const char **argv)
+int main()
 {
-    
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int a;
     cin >> a;
     int i = 0;
     while (a > 0)
     {
-        int ans = soln();
         i++;
-        cout << "Case #" << i << ": ";
-        if (ans)
-        {
-            cout << "Yes";
-        }
-        else
-        {
-            cout << "No";
-        }
-        cout << endl;
+        printf("Case #%d: %d\n", i, solve());
         a--;
     }
     return 0;
