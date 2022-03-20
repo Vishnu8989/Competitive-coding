@@ -6,6 +6,8 @@ int solve()
 int main()
 {
     ios_base::sync_with_stdio(false);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
     cin.tie(NULL);
     int a;
     cin >> a;
