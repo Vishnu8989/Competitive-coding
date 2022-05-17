@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+<<<<<<< HEAD
+=======
+import java.io.*;
+import java.lang.Math;
+>>>>>>> 0a594c57a184aefa485aaa46f5be0f2deb24c6b9
 
 public class P02 {
 
